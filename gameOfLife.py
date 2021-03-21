@@ -50,7 +50,7 @@ def createRandomGrid(N):
     return np.random.choice([1,0], N*N, p=[0.2, 0.8]).reshape(N, N)
 
 def updateImage(frameNum, img, grid):
-    newGrid = iterate(grid, bounds)
+    newGrid = iterate(grid)
     
     # update data
     img.set_data(newGrid)
